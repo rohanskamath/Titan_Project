@@ -1,0 +1,134 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="homepage1.master.cs" Inherits="homepage1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Home Page</title>
+    <link href="Stylesheet/btn.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-image: url(images/home.jpg)">
+    <form id="form1" runat="server">
+    <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br />
+        <br />
+        <br />
+        <asp:Menu ID="menubar" runat="server" Font-Bold="True" Font-Size="16pt" Height="27px"
+            Orientation="Horizontal" Width="1255px">
+            <StaticMenuItemStyle BackColor="Black" BorderColor="White" BorderStyle="Solid" BorderWidth="1px"
+                ForeColor="White" />
+            <DynamicHoverStyle BackColor="#C0FFFF" />
+            <DynamicMenuStyle BackColor="#E0E0E0" />
+            <DynamicMenuItemStyle BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False"
+                Font-Names="Times New Roman" Font-Size="Large" ForeColor="Black" VerticalPadding="8px" />
+            <StaticHoverStyle BackColor="White" ForeColor="Black" />
+            <Items>
+                <asp:MenuItem NavigateUrl="~/main.aspx" Text="Account" Value="Account">
+                    <asp:MenuItem Text="Change Password" Value="Change Password" NavigateUrl="~/changepass.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Users Account" Value="Users Account">
+                        <asp:MenuItem Text="Add User" Value="Add User" NavigateUrl="~/adduser.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Unlock User" Value="Unlock User" NavigateUrl="~/unlockuser.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Lock User" Value="Delete User" NavigateUrl="~/lockuser.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="View User" Value="View User" NavigateUrl="~/displayuser.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/adlogin.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Employee" Value="Employee">
+                    <asp:MenuItem Text="Employee Details" Value="Employee Details">
+                        <asp:MenuItem Text="Add Employee" Value="Add Employee" NavigateUrl="~/addemp.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Update Employee" Value="Update Employee" NavigateUrl="~/updateemp.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Inactive Employee" Value="Inactive Employee" NavigateUrl="~/inactivemp.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="View Empoyees" Value="View Empoyee">
+                        <asp:MenuItem Text="Working Employees" Value="Active Employees" NavigateUrl="~/actview.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Resigned Employees" Value="Inactive Employees" NavigateUrl="~/inacview.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Attendance" Value="Attendance" NavigateUrl="~/attendence.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="PaySlip" Value="PaySlip" NavigateUrl="~/payslip.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Supplier" Value="Supplier">
+                    <asp:MenuItem Text="Add Supplier" Value="Add Supplier" NavigateUrl="~/addsup.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Update Supplier" Value="Update Supplier" NavigateUrl="~/updatesup.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View Supplier" Value="View Supplier" NavigateUrl="~/viewsup.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Customer" Value="Customer">
+                    <asp:MenuItem Text="Customer Details" Value="Customer Details">
+                        <asp:MenuItem Text="Add Customer" Value="Add Customer" NavigateUrl="~/custadd.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Update Customer" Value="Update Customer" NavigateUrl="~/updatecust.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Search Customer" Value="Search Customer" NavigateUrl="~/searchcust.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="View Customer" Value="View Customer" NavigateUrl="~/viewcust.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Inventory" Value="Inventory">
+                    <asp:MenuItem Text="Add Stock" Value="Add Stock" NavigateUrl="~/addstock.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Update Stock" Value="Update Stock" NavigateUrl="~/updatestock.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View Stock" Value="View Stock" NavigateUrl="~/viewstock.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Purchase" Value="Purchase">
+                    <asp:MenuItem Text="Purchase Order" Value="Purchase Order" NavigateUrl="~/purchaseorder.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Purchase Invoice" Value="Purchase Invoice" NavigateUrl="~/purchasebill.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Purchase Return" Value="Purchase Return" NavigateUrl="~/purchasereturn.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Reorder Products" Value="Reorder Products" NavigateUrl="~/reorderitems.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Sales" Value="Sales">
+                    <asp:MenuItem Text="Sales Invoice" Value="Sales Invoice" NavigateUrl="~/salesbill.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sales Exchange" Value="Sales Return" NavigateUrl="~/salesreturn.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Service" Value="Service">
+                    <asp:MenuItem Text="Service Invoice" Value="Add Service" NavigateUrl="~/serviceadd.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View Services" Value="Service Bill" NavigateUrl="~/servicebill.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Report" Value="Report">
+                    <asp:MenuItem Text="Salary Report" Value="Salary Report" NavigateUrl="~/salaryreport.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sales Report" Value="Sales Report" NavigateUrl="~/salesreport1.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/purchasebillreport2.aspx" Text="Purchse Bill" Value="Purchse Bill">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Purchase Order" Value="Purchase Order" NavigateUrl="~/purorderreport2.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sales Return " Value="Sales Return " NavigateUrl="~/salesreturnreport1.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Stock Report" Value="Stock Report" NavigateUrl="~/stockreport.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Service Report" Value="Service Report" NavigateUrl="~/servicereport.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/main.aspx" Text="Home" Value="Logout"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        &nbsp;</div>
+    </form>
+</body>
+</html>

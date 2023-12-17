@@ -1,0 +1,14 @@
+﻿body 
+{
+		background-size:cover;
+		background-repeat :no-repeat;
+}
+
+#text2
+{
+	text-shadow:10px 10px 10px black;
+}
+.btn
+{
+		box-shadow:20px 20px 25px black;
+}

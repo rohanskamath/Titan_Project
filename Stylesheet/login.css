@@ -1,0 +1,186 @@
+﻿body
+{
+	background-size:cover;
+}
+.login
+{
+	width:320px;
+	height:500px;
+	background :rgba(0,0,0,0.5);
+	color:#fff;
+	top:50%;
+	left:50%;
+	position:absolute;
+	transform:translate(-50%,-50%);
+	box-sizing:border-box;
+	padding: 70px 30px;
+}
+.logo
+{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	position :absolute;
+	top:-50%;
+	left:calc(50%,-50px);
+	overflow :hidden ;
+}
+.h1
+{
+	margin:0;
+	padding :0 0 20px;
+	text-align:center ;
+}
+.login p
+{
+	margin:0;
+	padding:0;
+	font-weight :bold ;
+}
+.login input
+{
+	width:100%;
+	margin-bottom :20px;
+}
+.login input[type="text"],input[type="password"]
+{
+	border:none;
+	border-bottom :1px solid #fff;
+	background :transparent;
+	outline:none;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+}
+.login input[type="button"]
+{
+	border:1px solid blue;
+	border-color :Blue;
+	outline:none;
+	height:40px;
+	background :transperant;
+	color:black;
+	font-size :large;
+	border-radius:20px;
+}
+.login input[type="button"]:hover
+{
+	cursor :pointer;
+	background :black;
+	color:White;
+}
+.btn {
+    border-radius: 20px;
+    height: 40px;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn2 {
+    width: 10%;
+}
+
+.btn3 
+{
+	box-shadow:0 0 20px black;
+    background-color: transparent;
+    color: white;
+    border :1px solid #5dade2;
+}
+
+    .btn3:hover {
+        background-color:Aqua;
+        color: black;
+    }
+ .text
+{
+	border:none;
+	border-bottom :2px solid;
+	border-bottom-color :White ;
+	background :transparent;
+	color :white ;
+}
+
+var fname=document.getElementById("signupName");
+    var email=document.getElementById('signupEmail');
+    var pass=document.getElementById('signupPass');
+    var cpass=document.getElementById('signupCPass');
+    var form=document.getElementById('form');
+    function validateInput()
+    {
+        if(fname.value=="")
+        {
+            onError(fname,"*Please fill Name Field!!!*")
+        }
+        else
+        {
+            onSuccess(fname);
+        }
+        if(email.value=="")
+        {
+            onError(email,"*Please fill Email-ID Field!!!*");
+        }
+        else
+        {
+            if(!isValidEmail(email.value.trim()))
+            {
+                onError(email,"*Email is not Valid!!!*");
+            }
+            else
+            {
+                onSuccess(email);
+            }
+        }
+        if(pass.value=="")
+        {
+            onError(pass,"*Please fill Password Field!!!*")
+        }
+        else
+        {
+            if(pass.length <= 5)
+            {
+                onError(pass,"*Must contain atleast 6 characters!!*")
+            }
+            else
+            {
+                onSuccess(pass);
+            }
+        }
+        if(cpass.value=="")
+        {
+            onError(cpass,"*Please fill Confirm Password Field!!*")
+        }
+        else
+        {
+            if(pass.value==cpass.value)
+            {
+                onError(cpass,"*Passwords are not Matching!!*")
+            }
+            else
+            {
+                onSuccess(cpass);
+            }
+        }
+    }
+    document.querySelector("button").addEventListener('click',(event)=>{
+        event.preventDefault()
+        validateInput();
+    });
+    function onSuccess(input)
+    {
+        let parent=input.parentElement;
+        let msgEle=parent.querySelector("small");
+        msgEle.style.visibility="hidden";
+    }
+    function onError(input,msg)
+    {
+        let parent=input.parentElement;
+        let msgEle=parent.querySelector("small");
+        msgEle.style.visibility="visible";
+        msgEle.innerHTML=msg;
+    }
+    function isValidEmail(email){
+        return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+    </script>
